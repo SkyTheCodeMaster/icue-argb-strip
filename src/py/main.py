@@ -50,8 +50,8 @@ def send_leds() -> None:
   ok = False
   while not ok:
     data = ser.read(2).decode()
-    print("got ok, sending more data")
-    ok = data == "ok"
+    #print("got ok, sending more data")
+    ok = data in ["ok","ko"]
 
 def main() -> None:
   while True:
