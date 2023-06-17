@@ -45,6 +45,7 @@ def send_leds() -> None:
     return
   else:
     last_packet = packet
+    ser.write(packet)
   # now wait for arduino to say ok
   ok = False
   while not ok:
